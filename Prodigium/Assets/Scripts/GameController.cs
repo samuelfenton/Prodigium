@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     private QuestController p_questController;
 
+    [SerializeField]
+    private DungeonController p_dunController;
+
     // Use this for initialization
     void Start ()
     {
