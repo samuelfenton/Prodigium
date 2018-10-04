@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject p_pController;
 
-    GameObject p_pController;
-    GameObject p_aiController;
-    GameObject p_questController;
+    [SerializeField]
+    private AIController p_aiController;
+
+    //quest conroller
+    [SerializeField]
+    private QuestController p_questController;
 
     // Use this for initialization
     void Start ()
@@ -16,7 +21,9 @@ public class GameController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+
 	}
+
 }
