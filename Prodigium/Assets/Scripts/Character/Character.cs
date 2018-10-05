@@ -14,11 +14,15 @@ public class Character : MonoBehaviour
 
     [Header("Movement and Shizz")]
     [SerializeField]
-    protected float m_forwardSpeed = 1.0f;
+    public float m_forwardSpeed = 1.0f;
     [SerializeField]
-    protected float m_strafingSpeed = 1.0f;
+    public float m_strafingSpeed = 1.0f;
     [SerializeField]
-    protected float m_rotationSpeed = 1.0f;
+    public float m_rotationSpeed = 1.0f;
+
+    [Header("Attacking and Shizz")]
+    public float m_attackRange = 1.0f;
+    public float m_attackDamage = 1.0f;
 
     protected virtual void Start()
 	{
@@ -34,4 +38,9 @@ public class Character : MonoBehaviour
 	{
 		return m_currentHealth <= 0;
 	}
+
+    public void ModifyHealth(float p_value)
+    {
+        m_currentHealth += p_value;
+    }
 }
