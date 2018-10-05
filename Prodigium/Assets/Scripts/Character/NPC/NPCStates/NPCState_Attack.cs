@@ -56,7 +56,7 @@ public class NPCState_Attack : NPCState
         targetDir.y = 0;
 
         //Rotate towards target
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetDir), m_NPC.m_rotationSpeed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetDir), m_rotationSpeed * Time.fixedDeltaTime);
 
         //Move forwards
         if(MOARMaths.SqrDistance(m_targetPlayer.gameObject, gameObject) > m_attackRangeSqr)
@@ -65,7 +65,7 @@ public class NPCState_Attack : NPCState
         }
         else // Close enought to attack
         {
-
+            //
         }
         return false;
     }

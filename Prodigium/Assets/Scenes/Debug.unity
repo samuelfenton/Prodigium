@@ -147,6 +147,8 @@ MonoBehaviour:
   m_forwardSpeed: 10
   m_strafingSpeed: 6
   m_rotationSpeed: 5
+  m_attackRange: 1
+  m_attackDamage: 1
 --- !u!4 &93983902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4148796255509160, guid: a13690175e4e04ab88764d24197a2381,
@@ -742,6 +744,10 @@ Prefab:
         type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1441690069716996, guid: a13690175e4e04ab88764d24197a2381, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a13690175e4e04ab88764d24197a2381, type: 2}
