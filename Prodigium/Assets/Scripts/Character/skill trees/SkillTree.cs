@@ -4,41 +4,34 @@ using UnityEngine;
 
 public class SkillTree : MonoBehaviour {
 
-    public int SkillPoints;
+    public int SkillPoints = 0;
 
-    [SerializeField]
-    private GameObject m_baseSkills;
-
-    private bool Skill = false;
-    
-	// Use this for initialization
-	void Start ()
+    public bool HealthSkill = false;
+    int HealthTally = 0;
+   
+    // Use this for initialization
+    void Start()
     {
-        SkillPoints = 0;
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        DontDestroyOnLoad(this);    
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-		
-	}
-
-
-   void SKillClcikedOn()
-    {
-        //game object light up and turn on code goes here
-        Skill = true;
-        
-
 
     }
 
-    //in sepreate skript
-    void lightup()
+
+    void healthCLickON()
     {
-        if(Skill)
+        
+        if(SkillPoints >= 1 && HealthTally <= 5)
         {
-           //set what skill does
+            HealthSkill = true;
+            HealthTally += 1;
+            SkillPoints -= 1;
+
+            //tp do: change sprite to light up mode later
         }
     }
 
