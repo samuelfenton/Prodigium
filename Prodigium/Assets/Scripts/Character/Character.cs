@@ -15,10 +15,11 @@ public class Character : MonoBehaviour
     [Header("Movement and Shizz")]
 
     [SerializeField]
-    protected float m_forwardSpeed = 1.0f;
+    public float m_forwardSpeed = 1.0f;
     [SerializeField]
-    protected float m_strafingSpeed = 1.0f;
+    public float m_strafingSpeed = 1.0f;
     [SerializeField]
+<<<<<<< HEAD
     protected float m_rotationSpeed = 1.0f;
 
     [Header("Attacking and Shizz")]
@@ -27,7 +28,22 @@ public class Character : MonoBehaviour
     [Header("Stats modifiers")]
     public float m_attackMod = 0.0f;
     public float m_speedMod = 0.0f;
+=======
+    public float m_rotationSpeed = 1.0f;
+
+    [Header("Attacking/Armour and Shizz")]
+    public WeaponInventory m_currentWeapon = null;
+    public ArmourInventoru m_currentArmour = null;
+    public float m_attackRange = 1.0f;
+
+    [Header("Stats modifiers")]
+    public float m_attackMod = 0.0f;
+    public float m_speedMod = 0.0f;
+    public float m_armourMod = 0.0f;
+>>>>>>> 48ca6a461aab5a941e8c455c4d908117892230c9
     public float m_healthMod = 0.0f;
+
+    public float m_naturalResistance = 0;
 
     protected virtual void Start()
 	{
@@ -48,9 +64,19 @@ public class Character : MonoBehaviour
     {
         m_currentHealth += p_value;
     }
+<<<<<<< HEAD
 
     public void DealDamage(Character p_character, Weapon p_weapon)
+=======
+
+    public void DealDamage(Character p_attackCharacter)
+>>>>>>> 48ca6a461aab5a941e8c455c4d908117892230c9
     {
-        //m_currentHealth += p_value;
+        float damage = 0.0f;
+        damage = p_attackCharacter.m_currentWeapon != null ? p_attackCharacter.m_currentWeapon.m_weaponDamage : 1; //Flat damage
+        damage *= 1 + p_attackCharacter.m_attackMod; //Attack modified
+
+
+        //m_currentHealth -= (1 + p_attackCharacter.m_attackMod) * p_weaponDamage;
     }
 }

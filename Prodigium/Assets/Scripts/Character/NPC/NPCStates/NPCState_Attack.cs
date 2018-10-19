@@ -63,7 +63,7 @@ public class NPCState_Attack : NPCState
         {
             m_NPC.m_customPhysics.m_velocity.z = m_forwardSpeed;
         }
-        else // Close enought to attack
+        else // Close enough to attack
         {
             //
         }

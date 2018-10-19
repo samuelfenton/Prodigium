@@ -23,7 +23,7 @@ public class NaturelArmor : SkillTree {
 
         if (m_treeSkill.DamageSkill)
         {
-            m_player. += 1;
+            m_player.m_naturalResistance += 1;
         }
 
     }
