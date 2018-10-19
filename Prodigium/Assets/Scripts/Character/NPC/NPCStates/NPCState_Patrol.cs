@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCState_Patrol : NPCState
 {
+    List<GameObject> m_patrolNodes = new List<GameObject>();
     //-------------------
     //Initilse the state, runs only once at start
     //-------------------
@@ -27,6 +28,7 @@ public class NPCState_Patrol : NPCState
     //-------------------
     public override bool UpdateState()
     {
+
         return true;
     }
 

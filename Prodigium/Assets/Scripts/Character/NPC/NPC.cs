@@ -8,14 +8,24 @@ public class NPC : Character
     [SerializeField]
     public float m_detectionRange = 10.0f;
 
+    private StateMachine m_NPCStateMachine = null;
+
     protected override void Start()
     {
+        m_NPCStateMachine = GetComponent<StateMachine>();
 
+#if UNITY_EDITOR
+        if (m_NPCStateMachine == null)
+            Debug.Log("NPC has no state machine attached");
+#endif
+
+        m_NPCStateMachine.InitStateMachine();
     }
 
     protected override void FixedUpdate()
     {
-
         base.FixedUpdate();
+
+        m_NPCStateMachine.UpdateStateMachine();
     }
 }
