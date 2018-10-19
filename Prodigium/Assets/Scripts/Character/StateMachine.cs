@@ -35,7 +35,7 @@ public class StateMachine : MonoBehaviour {
             }
 
             //No valid states default to the defualt state
-            if (m_currentState.m_defaultState != null)
+            if (!m_currentState.IsValid() && m_currentState.m_defaultState != null)
             {
                 SwapState(m_currentState.m_defaultState);
             }

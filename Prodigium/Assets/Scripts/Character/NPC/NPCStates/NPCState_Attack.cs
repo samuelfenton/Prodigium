@@ -93,6 +93,7 @@ public class NPCState_Attack : NPCState
     {
         if(m_targetPlayer!=null)
         {
+            Debug.Log(MOARMaths.SqrDistance(gameObject, m_targetPlayer.gameObject));
             if (MOARMaths.SqrDistance(gameObject, m_targetPlayer.gameObject) < m_detectionRangeSqr)
             {
                 return true; //Early breakout

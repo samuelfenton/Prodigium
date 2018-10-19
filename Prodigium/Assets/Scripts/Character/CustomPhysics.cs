@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class CustomPhysics : MonoBehaviour 
 {
     public static float GRAVITY = -9.8f;

@@ -12,6 +12,8 @@ public class NPC : Character
 
     protected override void Start()
     {
+        base.Start();
+
         m_NPCStateMachine = GetComponent<StateMachine>();
 
 #if UNITY_EDITOR
