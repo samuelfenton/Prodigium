@@ -60,7 +60,7 @@ public class Character : MonoBehaviour
         damage = p_attackCharacter.m_currentWeapon != null ? p_attackCharacter.m_currentWeapon.m_weaponDamage : 1; //Flat damage
         damage *= 1 + p_attackCharacter.m_attackMod; //Attack modified
 
-        damage *= ((m_naturalResistance + m_armourMod) * m_armourMod)
-        //m_currentHealth -= (1 + p_attackCharacter.m_attackMod) * p_weaponDamage;
+        damage *= Mathf.Atan((m_naturalResistance + m_armourMod) * m_armourMod);
+        m_currentHealth -= damage;
     }
 }
