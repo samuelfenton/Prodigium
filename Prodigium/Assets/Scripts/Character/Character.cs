@@ -60,7 +60,7 @@ public class Character : MonoBehaviour
         damage = p_attackCharacter.m_currentWeapon != null ? p_attackCharacter.m_currentWeapon.m_weaponDamage : 1; //Flat damage
         damage *= 1 + p_attackCharacter.m_attackMod; //Attack modified
 
-        damage *= Mathf.Atan((m_naturalResistance + m_armourMod) * m_armourMod);
+        damage *= 1 - Mathf.Atan((m_naturalResistance + m_armourMod) * m_armourMod);//Run resitance through invers tan function, Addes to dimishing returns
         m_currentHealth -= damage;
     }
 }
