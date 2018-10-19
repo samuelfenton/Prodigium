@@ -13,21 +13,13 @@ public class Character : MonoBehaviour
     protected float m_currentHealth = 1.0f;
 
     [Header("Movement and Shizz")]
-<<<<<<< HEAD
+
     [SerializeField]
     protected float m_forwardSpeed = 1.0f;
     [SerializeField]
     protected float m_strafingSpeed = 1.0f;
     [SerializeField]
     protected float m_rotationSpeed = 1.0f;
-
-=======
-    [SerializeField]
-    public float m_forwardSpeed = 1.0f;
-    [SerializeField]
-    public float m_strafingSpeed = 1.0f;
-    [SerializeField]
-    public float m_rotationSpeed = 1.0f;
 
     [Header("Attacking and Shizz")]
     public float m_attackRange = 1.0f;
@@ -37,7 +29,6 @@ public class Character : MonoBehaviour
     public float m_speedMod = 0.0f;
     public float m_healthMod = 0.0f;
 
->>>>>>> SamsBranch
     protected virtual void Start()
 	{
         m_customPhysics = GetComponent<CustomPhysics>();
