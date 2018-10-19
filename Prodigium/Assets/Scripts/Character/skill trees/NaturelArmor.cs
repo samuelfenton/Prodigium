@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageSkill : SkillTree {
-
+public class NaturelArmor : SkillTree {
 
     private SkillTree m_treeSkill;
     private Player m_player;
 
     // Use this for initialization
-    void Start ()
-    {
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
+	void Update () {
 		
 	}
+
 
     void SKillClcikedOn()
     {
 
         if (m_treeSkill.DamageSkill)
         {
-            m_player.m_attackMod += 0.2f ;
+            m_player. += 1;
         }
 
     }
+
+
 }
