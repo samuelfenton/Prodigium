@@ -8,7 +8,10 @@ public class SkillTree : MonoBehaviour {
 
     public bool HealthSkill = false;
     int HealthTally = 0;
-   
+
+    public bool DamageSkill = false;
+    int DamageTally = 0;
+
     // Use this for initialization
     void Start()
     {
@@ -29,6 +32,19 @@ public class SkillTree : MonoBehaviour {
         {
             HealthSkill = true;
             HealthTally += 1;
+            SkillPoints -= 1;
+
+            //tp do: change sprite to light up mode later
+        }
+    }
+
+    void DamageCLickON()
+    {
+
+        if (SkillPoints >= 1 && DamageTally <= 5)
+        {
+            DamageSkill = true;
+            DamageTally += 1;
             SkillPoints -= 1;
 
             //tp do: change sprite to light up mode later
