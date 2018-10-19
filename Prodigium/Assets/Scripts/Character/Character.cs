@@ -22,7 +22,11 @@ public class Character : MonoBehaviour
 
     [Header("Attacking and Shizz")]
     public float m_attackRange = 1.0f;
-    public float m_attackDamage = 1.0f;
+
+    [Header("Stats modifiers")]
+    public float m_attackMod = 0.0f;
+    public float m_speedMod = 0.0f;
+    public float m_healthMod = 0.0f;
 
     protected virtual void Start()
 	{
@@ -42,5 +46,10 @@ public class Character : MonoBehaviour
     public void ModifyHealth(float p_value)
     {
         m_currentHealth += p_value;
+    }
+
+    public void DealDamage(Character p_character, Weapon p_weapon)
+    {
+        //m_currentHealth += p_value;
     }
 }
