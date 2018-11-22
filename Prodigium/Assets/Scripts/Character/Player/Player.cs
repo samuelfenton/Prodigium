@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Player : Character 
 {
+    public bool m_enraged = false;
+    public bool m_bleedDamage = false;
+    public bool m_sweep = false;
+    public bool m_slam = false;
+    public bool m_power = false;
+
     protected override void FixedUpdate()
     {
         //Movement
