@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthSkill : SkillTree
-{
+public class SlamAttack : SkillTree {
 
     private SkillTree m_treeSkill;
     private Player m_player;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -20,10 +19,10 @@ public class HealthSkill : SkillTree
 
     void SKillClcikedOn()
     {
-    
-     if(m_treeSkill.m_HealthSkill)
+
+        if (m_treeSkill.m_SlamAttack)
         {
-            m_player.m_maxHealth += 20;
+            m_player.m_SlamActive = true;
         }
 
     }
